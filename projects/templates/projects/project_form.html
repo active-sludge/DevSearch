@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Form</title>
+</head>
+<body>
+    {% extends 'main.html' %}
+    {% block content %}
+
+        <h1>Project Form</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit">
+        </form>
+
+    {% endblock %}
+</body>
+</html>
